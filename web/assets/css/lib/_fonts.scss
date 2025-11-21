@@ -1,0 +1,89 @@
+// FONTS
+
+$light: 300;
+$regular: 400;
+$medium: 500;
+$bold: 700;
+
+p {
+  strong {
+    font-weight: bold;
+  }
+
+  blockquote {
+    font-style: italic;
+  }
+
+  a {
+    color: inherit !important;
+    font-size: 1em;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 1.6em;
+    text-decoration: none !important;
+
+    &:hover {
+      text-decoration: underline !important;
+    }
+  }
+}
+
+span {
+  display: block;
+}
+
+ul {
+  width: 100%;
+  list-style: disc outside;
+  padding: 0 0 0 1.2em;
+
+  li {
+    font-size: 1em;
+    letter-spacing: 0;
+    line-height: 1.5em;
+
+    strong {
+      font-weight: bold;
+    }
+  }
+}
+
+ol {
+  width: 100%;
+  padding: 0 0 0 1.2em;
+
+  li {
+    font-size: 1em;
+    letter-spacing: 0;
+    line-height: 1.5em;
+
+    strong {
+      font-weight: bold;
+    }
+  }
+}
+
+input, textarea, select {
+  background-color: transparent;
+  border-radius: 0;
+  //border: none;
+}
+
+.richText {
+  * {
+    margin-bottom: 1em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  figure {
+    width: 100%;
+    max-width: 1000px;
+
+    img {
+      width: 100%;
+    }
+  }
+}

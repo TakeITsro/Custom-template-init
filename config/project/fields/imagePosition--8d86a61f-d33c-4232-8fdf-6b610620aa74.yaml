@@ -1,0 +1,40 @@
+columnSuffix: null
+handle: imagePosition
+instructions: null
+name: 'Image position'
+searchable: false
+settings:
+  customOptions: false
+  iconsOnly: true
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - Left
+        -
+          - value
+          - left
+        -
+          - icon
+          - arrow-left-long
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - Right
+        -
+          - value
+          - right
+        -
+          - icon
+          - arrow-right-long
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\ButtonGroup

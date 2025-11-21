@@ -1,0 +1,45 @@
+color: cyan
+description: null
+fieldLayouts:
+  2d2713fc-1673-4c3c-bd22-fae89cdf2265:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        name: Content
+        uid: 0de5dd52-5f65-4e3f-86ef-aa3eb43f1e48
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-11-21T12:24:44+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 24a65658-4823-477b-8f96-58eb9e3010a2 # SEO
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a6355fc5-72cd-4d1d-86e4-a69f757e1316
+            userCondition: null
+            warning: null
+            width: 100
+        name: SEO
+        uid: 4df88385-b0d5-41d0-a338-bf6871a9c379
+        userCondition: null
+handle: homepage
+hasTitleField: false
+icon: house
+name: Homepage
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

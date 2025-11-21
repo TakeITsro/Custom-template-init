@@ -1,0 +1,9 @@
+baseUrl: 'http://gwhotel.takeitsro.sk/'
+enabled: true
+handle: default
+hasUrls: true
+language: en
+name: 'GW Hotel'
+primary: true
+siteGroup: 58bb178b-0f17-4a8b-b9b3-8be81a99e466 # GW Hotel
+sortOrder: 1

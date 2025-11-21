@@ -1,0 +1,30 @@
+fieldLayouts:
+  2ce553d6-cfa9-4b7c-8e6a-0ae178d9c713:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-11-21T12:23:38+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 37dd596d-7f57-4e36-b38c-b12ea0f2e01e # Navigation
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 14e7da9e-d53d-47da-9712-b19bf74b50d9
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Hlavná navigácia'
+        uid: 261c3efa-9519-400c-aca5-499c2a292a24
+        userCondition: null
+handle: menu
+name: Navigácia
+sortOrder: 3

@@ -1,0 +1,40 @@
+color: orange
+description: null
+fieldLayouts:
+  b891c627-a879-4bec-8cfe-624774f3786d:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-11-21T12:04:29+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: a9ceab82-54cd-40a5-adcb-029e5e3c9ca3 # Rich text extended
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2653687f-c1dc-4c3c-aaad-e9054bdf9e5e
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: b4cf39ba-a7f9-4649-b3b4-31780e1aa31a
+        userCondition: null
+handle: universalMatrixText
+hasTitleField: false
+icon: text-size
+name: Text
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

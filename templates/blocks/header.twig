@@ -1,0 +1,40 @@
+{#{% cache using key "header" for 3 months %}#}
+<header class="header flex align_center absolute {% if entry.section.handle != 'homepage' %}subpage_header{% endif %}" x-data="initHeader()">
+    {% include "components/header/logo" %}
+
+    {% include "components/header/contact" %}
+
+    {% include "components/header/navigation" %}
+
+    <div class="hamburger flex align_center justify_center" @click="openMenu()">
+        <span class="open_text absolute" x-html="hamburgerText">menu</span>
+    </div>
+
+    {% include "components/header/language_selector" %}
+
+</header>
+
+<script>
+    function initHeader() {
+        return {
+            hamburgerText: "menu",
+            openMenu() {
+                const body = document.querySelector("body");
+                const menu = document.querySelector(".menu");
+                const header = document.querySelector("header");
+                if (menu.classList.contains("open")) {
+                    body.classList.remove("fixed_body");
+                    menu.classList.remove("open");
+                    header.classList.remove("open");
+                    this.hamburgerText = "menu"
+                } else {
+                    body.classList.add("fixed_body");
+                    menu.classList.add("open");
+                    header.classList.add("open");
+                    this.hamburgerText = "close"
+                }
+            }
+        }
+    }
+</script>
+{#{% endcache %}#}

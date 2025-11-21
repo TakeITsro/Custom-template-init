@@ -1,0 +1,10 @@
+<div class="universalMatrix_elem table">
+    <table>
+        {% for row in entry.table %}
+            <tr>
+                <td>{{ row.handle }}</td>
+                <td>{{ row.data }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</div>

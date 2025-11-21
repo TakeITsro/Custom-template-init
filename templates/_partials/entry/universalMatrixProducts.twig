@@ -1,0 +1,36 @@
+<div class="universalMatrix_elem flex_column align_center products">
+    <div class="products_swiper">
+        <div class="swiper-wrapper">
+            {% for elem in entry.products.all() %}
+                <a href="{{ elem.url() }}" class="products_item swiper-slide flex_column align_start">
+                    <div class="image flex align_center">
+                        <img src="{{ elem.image.one().url('indexProductImage') }}" alt="{{ elem.image.one().title }}">
+                    </div>
+                    {% if elem.tags is not empty %}
+                        <div class="tag absolute right" style="background-color: {{ elem.tags.one().color }}">{{ elem.tags.one().title }}</div>
+                    {% endif %}
+                    <h3 class="title">{{ elem.title }}</h3>
+                    <div class="price_wrapper flex align_end">
+                        {% if elem.salePrice is empty %}
+                            <div class="column flex_column align_start">
+                                <div class="price">{{ elem.price|number_format(0, '.', ' ') }} €</div>
+                                <div class="priceNoTax">{{ (elem.price / 1.2)|number_format(0, '.', ' ')  }} € {{ "bez DPH"|t }}</div>
+                            </div>
+                        {% else %}
+                            <div class="column flex_column align_start inactive">
+                                <div class="price">{{ elem.price|number_format(0, '.', ' ') }} €</div>
+                                <div class="priceNoTax">{{ (elem.price / 1.2)|number_format(0, '.', ' ')  }} € {{ "bez DPH"|t }}</div>
+                            </div>
+
+                            <div class="column flex_column align_start">
+                                <div class="price">{{ elem.salePrice|number_format(0, '.', ' ') }} €</div>
+                                <div class="priceNoTax">{{ (elem.salePrice / 1.2)|number_format(0, '.', ' ')  }} € {{ "bez DPH"|t }}</div>
+                            </div>
+                        {% endif %}
+                    </div>
+                    <div class="arrow absolute"></div>
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+</div>

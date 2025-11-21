@@ -1,0 +1,70 @@
+color: orange
+description: null
+fieldLayouts:
+  4010dfc3-d4b7-498f-bac6-55650bd1c8f8:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2025-11-21T12:03:30+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 121289ba-c3de-4bc6-acd3-a4c16088a713
+            userCondition: null
+            warning: null
+            width: 75
+          -
+            dateAdded: '2025-11-21T12:06:51+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 8df97e64-c993-4375-ba83-6d840599ffdf # Title level
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Úroveň
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 897d4a48-171d-49ae-ac99-2a162ba89d30
+            userCondition: null
+            warning: null
+            width: 25
+        name: Content
+        uid: b1785f82-8cc8-40df-9c3d-749b0a5cd590
+        userCondition: null
+handle: universalMatrixTitle
+hasTitleField: true
+icon: heading
+name: Titul
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

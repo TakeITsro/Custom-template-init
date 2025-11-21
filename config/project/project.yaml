@@ -1,0 +1,90 @@
+dateModified: 1763728032
+email:
+  fromEmail: admin@takeitsro.sk
+  fromName: 'GW Hotel'
+  transportType: craft\mail\transportadapters\Sendmail
+fs:
+  pictures:
+    hasUrls: true
+    name: Pictures
+    settings:
+      path: '@webroot/assets/pictures'
+    type: craft\fs\Local
+    url: '@web/assets/pictures'
+meta:
+  __names__:
+    4c3241d5-a244-44fa-86ad-e8cb807bf8e0: Simple # Simple
+    4ee7bbf1-00f5-4854-af48-28546bfe0e52: 'Text s obrázkom' # Text s obrázkom
+    5c4bfb49-f023-4c60-9d65-1509715c2acc: 'GW Hotel HU' # GW Hotel HU
+    6bbd57d4-a325-4575-bfe8-6f1b0c4af23f: 'Social media' # Social media
+    8c225035-f1c3-4231-b893-90176b1fe0c9: Image # Image
+    8d86a61f-d33c-4232-8fdf-6b610620aa74: 'Image position' # Image position
+    8df97e64-c993-4375-ba83-6d840599ffdf: 'Title level' # Title level
+    9a6e0620-4809-4538-a5ec-99358c24d1c0: 'Google Analytics' # Google Analytics
+    15aaa04b-97c0-4a69-8fd8-63f04b2faa87: Obrázok # Obrázok
+    24a65658-4823-477b-8f96-58eb9e3010a2: SEO # SEO
+    37dd596d-7f57-4e36-b38c-b12ea0f2e01e: Navigation # Navigation
+    41dbc146-a353-4ead-aea8-3da132b4c054: 'Text multiline' # Text multiline
+    58bb178b-0f17-4a8b-b9b3-8be81a99e466: 'GW Hotel' # GW Hotel
+    58da1196-3e88-4629-80d2-35907441a03e: Homepage # Homepage
+    68f5ac63-9691-4d0d-bc4b-c599e04a1787: Galéria # Galéria
+    109b8335-0591-4194-8378-7eaf1d0f8a1b: Pictures # Pictures
+    722afe03-8eea-4e09-988f-f7cc536575b7: Universal # Universal
+    754fec9a-0213-43f2-9a6e-8b05bf8f8873: Navigácia # Navigácia
+    3620f296-fa12-4a20-a4ff-50afb9378f68: Text # Text
+    40509efc-f763-4b2e-9d17-a604b05f2fdc: Gallery # Gallery
+    0949937c-0ca6-4e45-ad21-3015403228aa: Titul # Titul
+    02663346-777f-4ddc-b6bf-19e9887bd398: Tlačidlo # Tlačidlo
+    25792126-cb57-4839-8fba-8dc0fb24a865: Universal # Universal
+    a7cd4dc1-edee-4f96-ab0c-a3481b00b6cd: 'Navigation item' # Navigation item
+    a9ceab82-54cd-40a5-adcb-029e5e3c9ca3: 'Rich text extended' # Rich text extended
+    a68ab4b9-3cd1-41ad-bc0a-45223018a5c0: 'GW Hotel' # GW Hotel
+    a678fecf-ce85-4191-8f94-cf5655ed1299: Extended # Extended
+    a5845c9f-3f7b-4a9e-820a-5542ce07f50f: Kontakt # Kontakt
+    ae2e4c67-ab55-4002-b313-0c11d706c0a5: Text # Text
+    b42ea0af-0603-4764-8791-e05548509650: 'Universal matrix' # Universal matrix
+    b17572c4-2051-4d08-ba98-d5036bd84848: Homepage # Homepage
+    c20f888a-3f3b-49f5-afa7-520ac7d11e80: Contact # Contact
+    c32f72bb-a4df-43b3-97d8-2e9166937d1a: 'Rich text simple' # Rich text simple
+    dcd70131-3d39-4c78-bd1f-962def171b22: Phone # Phone
+    eb46378c-fdcd-4b50-8a77-2dd98f76dffe: 'Link field' # Link field
+    f3f24bfa-8ca4-4ffb-aabf-364a7bb8aa54: Email # Email
+    fa0f10f4-83d1-435b-9b51-7b04781920f6: Kontakt # Kontakt
+plugins:
+  ckeditor:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0.0
+  contact-form:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  contact-form-extensions:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.1
+  contact-form-honeypot:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  seo:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.2.0
+  site-switcher:
+    edition: standard
+    enabled: true
+    schemaVersion: 0.0.0
+system:
+  edition: solo
+  live: true
+  name: 'GW Hotel'
+  schemaVersion: 5.8.0.3
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  require2fa: false
+  requireEmailVerification: true

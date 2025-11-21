@@ -1,0 +1,29 @@
+<div class="universalMatrix_elem flex align_center form">
+    <div class="column flex_column align_start">
+        <h2 class="title_h2 blue">{{ "Máte otázku?\nNapíšte nám!"|t|raw|nl2br }}</h2>
+        <span class="small">{{ "Alebo zavolajte na"|t }}:</span>
+        <a href="tel:{{ contact.phone }}" class="phone">{{ contact.phone }}</a>
+    </div>
+
+    <form method="post" action="" accept-charset="UTF-8" class="form flex align_start">
+        {{ csrfInput() }}
+        {{ actionInput('contact-form/send') }}
+        <input type="hidden" name="subject" value="{{ "Contact form"|t }}">
+
+        <div class="form_column flex_column align_start">
+            <input type="text" name="fomrName" required placeholder="{{ "Meno a Priezvisko"|t }}" class="input">
+            <input type="text" name="message[Phone]" required placeholder="{{ "Telefón"|t }}" class="input">
+            <input type="email" name="fromEmail" required placeholder="{{ "E-mail"|t }}" class="input">
+            <input type="text" name="email2" id="email2" tabindex="-1">
+        </div>
+        <div class="form_column flex_column align_start">
+            <textarea name="message[body]" rows="10" placeholder="{{ "Správa"|t }}"></textarea>
+            <div class="gdpr flex align_start">
+                <input type="checkbox" name="gdpr" required id="gdpr_input">
+                <div class="custom_checkbox"></div>
+                <label for="gdpr_input">{{ "Súhlasím…"|t }}</label>
+            </div>
+            <button class="btn square blue"><span>{{ "ODOSLAŤ"|t }}</span></button>
+        </div>
+    </form>
+</div>

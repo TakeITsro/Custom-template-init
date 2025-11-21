@@ -1,0 +1,6 @@
+<div class="header_lang flex align_center">
+    {% set element = (category ?? entry ?? null) %}
+    {% for site in craft.app.sites.getAllSites() %}
+        <a href="{{ siteSwitcher(site.handle, element) }}" class="lang_item {% if site.handle == currentSite.handle %}active{% endif %}">{{ site.language }}</a>
+    {% endfor %}
+</div>

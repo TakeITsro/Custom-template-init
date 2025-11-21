@@ -1,0 +1,11 @@
+<div class="universalMatrix_elem flex align_start tableImage {{ entry.imagePosition.value }}">
+    <table>
+        {% for row in entry.table %}
+            <tr>
+                <td>{{ row.handle }}</td>
+                <td>{{ row.data }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    <img src="{{ entry.image.one().url('universalTextImage') }}" alt="{{ entry.image.one().title }}" class="image">
+</div>

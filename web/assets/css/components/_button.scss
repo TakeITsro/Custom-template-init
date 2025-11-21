@@ -1,0 +1,20 @@
+.btn {
+  width: fit-content;
+  height: fit-content;
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0.3em 1.4em;
+  min-width: 125px;
+  min-height: 40px;
+
+  span {
+
+    text-align: center;
+    text-transform: uppercase;
+    z-index: 5;
+  }
+}

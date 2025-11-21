@@ -1,0 +1,40 @@
+color: orange
+description: null
+fieldLayouts:
+  d65e6637-578e-4e15-adb6-806448de33e0:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-11-21T12:10:44+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 8c225035-f1c3-4231-b893-90176b1fe0c9 # Image
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Obrázok
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: cfa6c65e-67e5-46cc-abe5-9b8297f8e45f
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 4db6745e-7187-4f6f-8a0b-557a964dc116
+        userCondition: null
+handle: universalMatrixImage
+hasTitleField: false
+icon: image
+name: Obrázok
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

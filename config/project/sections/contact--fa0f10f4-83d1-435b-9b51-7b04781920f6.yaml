@@ -1,0 +1,26 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: c20f888a-3f3b-49f5-afa7-520ac7d11e80 # Contact
+handle: contact
+maxAuthors: 1
+name: Kontakt
+previewTargets:
+  -
+    label: 'Primary entry page'
+    refresh: '1'
+    urlFormat: '{url}'
+propagationMethod: all
+siteSettings:
+  5c4bfb49-f023-4c60-9d65-1509715c2acc: # GW Hotel HU
+    enabledByDefault: true
+    hasUrls: true
+    template: pages/contact.twig
+    uriFormat: kontakt
+  a68ab4b9-3cd1-41ad-bc0a-45223018a5c0: # GW Hotel
+    enabledByDefault: true
+    hasUrls: true
+    template: pages/contact.twig
+    uriFormat: kontakt
+type: single

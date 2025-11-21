@@ -1,0 +1,93 @@
+color: lime
+description: null
+fieldLayouts:
+  9b5d8883-0977-47e2-916f-ca8e65967192:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2025-11-21T12:24:02+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 44fdb5f4-7a1c-4e65-8fec-d271bf53b4a7
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-11-21T12:25:30+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: b42ea0af-0603-4764-8791-e05548509650 # Universal matrix
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 31fb81eb-14d7-47b3-b8ce-01ac0630a349
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: d6c06c63-0e02-4ccc-9278-203704856ab5
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-11-21T12:25:30+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 24a65658-4823-477b-8f96-58eb9e3010a2 # SEO
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b1210a32-537f-4437-af29-3dad49ef7e1b
+            userCondition: null
+            warning: null
+            width: 100
+        name: SEO
+        uid: 37c14d29-888e-4855-81c7-601b6d8dd49a
+        userCondition: null
+handle: universal
+hasTitleField: true
+icon: recycle
+name: Universal
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

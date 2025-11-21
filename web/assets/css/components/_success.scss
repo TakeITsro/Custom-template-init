@@ -1,0 +1,17 @@
+.form_message {
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  max-width: 500px;
+  min-height: 300px;
+  background-color: #ffffff;
+  padding: 2.5em;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  z-index: 300;
+  transform: translate(-50%, -50%);
+
+  .message {
+    font-size: 2em;
+    text-align: center;
+  }
+}

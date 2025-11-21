@@ -1,0 +1,27 @@
+{% if craft.app.session.hasFlash('success') %}
+    <div class="form_message flex align_center justify_center fixed">
+        <div class="message success">{{ craft.app.session.getFlash('success') }}</div>
+    </div>
+
+    <script>
+        const message = document.querySelector(".form_message");
+        if (message) {
+            setTimeout(() => {
+                message.style.display = "none";
+            }, 4000);
+        }
+    </script>
+{% elseif craft.app.session.hasFlash('error') %}
+    <div class="form_message fixed">
+        <div class="message error">{{ craft.app.session.getFlash('error') }}</div>
+    </div>
+
+    <script>
+        const message = document.querySelector(".form_message");
+        if (message) {
+            setTimeout(() => {
+                message.style.display = "none";
+            }, 4000);
+        }
+    </script>
+{% endif %}

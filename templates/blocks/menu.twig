@@ -1,0 +1,17 @@
+{#{% cache using key "mobile_menu" for 3 months %}#}
+<div class="menu flex_column align_center justify_center fixed">
+    <div class="menu_nav flex_column align_center">
+        {% if menu.navigation is not empty %}
+            {% for item in menu.navigation.all() %}
+                <a href="{{ item.linkField }}" class="nav_item flex align_center">{{ item.title }}</a>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <div class="menu_lang flex align_center">
+        {% set element = (category ?? entry ?? null) %}
+        {% for site in craft.app.sites.getAllSites() %}
+            <a href="{{ siteSwitcher(site.handle, element) }}" class="lang_item {% if site.handle == currentSite.handle %}active{% endif %}">{{ site.language }}</a>
+        {% endfor %}
+    </div>
+</div>
+{#{% endcache %}#}

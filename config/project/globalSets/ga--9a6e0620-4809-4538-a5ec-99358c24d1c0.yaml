@@ -1,0 +1,30 @@
+fieldLayouts:
+  4cdb25b1-a92a-44b4-83e2-be2200fa1e04:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-11-21T12:22:38+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: ae2e4c67-ab55-4002-b313-0c11d706c0a5 # Text
+            handle: googleID
+            includeInCards: false
+            instructions: null
+            label: 'Google ID'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 42b53fd2-a097-451b-9343-2b211b387f0a
+            userCondition: null
+            warning: null
+            width: 100
+        name: GA
+        uid: af89bd4d-d026-4dcf-bb07-c14393392ea8
+        userCondition: null
+handle: ga
+name: 'Google Analytics'
+sortOrder: 2

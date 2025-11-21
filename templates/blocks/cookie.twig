@@ -1,0 +1,286 @@
+<script>
+    !function(e,t){"object"==typeof exports&&"undefined"!=typeof module?module.exports=t():"function"==typeof define&&define.amd?define(t):(e="undefined"!=typeof globalThis?globalThis:e||self,function(){var n=e.Cookies,o=e.Cookies=t();o.noConflict=function(){return e.Cookies=n,o}}())}(this,(function(){"use strict";function e(e){for(var t=1;t<arguments.length;t++){var n=arguments[t];for(var o in n)e[o]=n[o]}return e}var t=function t(n,o){function r(t,r,i){if("undefined"!=typeof document){"number"==typeof(i=e({},o,i)).expires&&(i.expires=new Date(Date.now()+864e5*i.expires)),i.expires&&(i.expires=i.expires.toUTCString()),t=encodeURIComponent(t).replace(/%(2[346B]|5E|60|7C)/g,decodeURIComponent).replace(/[()]/g,escape);var c="";for(var u in i)i[u]&&(c+="; "+u,!0!==i[u]&&(c+="="+i[u].split(";")[0]));return document.cookie=t+"="+n.write(r,t)+c}}return Object.create({set:r,get:function(e){if("undefined"!=typeof document&&(!arguments.length||e)){for(var t=document.cookie?document.cookie.split("; "):[],o={},r=0;r<t.length;r++){var i=t[r].split("="),c=i.slice(1).join("=");try{var u=decodeURIComponent(i[0]);if(o[u]=n.read(c,u),e===u)break}catch(e){}}return e?o[e]:o}},remove:function(t,n){r(t,"",e({},n,{expires:-1}))},withAttributes:function(n){return t(this.converter,e({},this.attributes,n))},withConverter:function(n){return t(e({},this.converter,n),this.attributes)}},{attributes:{value:Object.freeze(o)},converter:{value:Object.freeze(n)}})}({read:function(e){return'"'===e[0]&&(e=e.slice(1,-1)),e.replace(/(%[\dA-F]{2})+/gi,decodeURIComponent)},write:function(e){return encodeURIComponent(e).replace(/%(2[346BF]|3[AC-F]|40|5[BDE]|60|7[BCD])/g,decodeURIComponent)}},{path:"/"});return t}));
+
+    function initCookies() {
+        return {
+            cookies_content: {
+                companyName: "",
+                cookies: [
+                    {
+                        name: "functional",
+                        title: "Funkčné cookies",
+                        text: "Tieto cookies potrebujete pre správny chod webovej stránky.",
+                        value: "1",
+                        required: true,
+                    },
+                    {
+                        name: "analytics",
+                        title: "Analytické cookies",
+                        text: "Pre vylepšenie naších služieb, využívame službu Google Analytics, ktorá odosiela anonymné informácie o Vašej návšteve a zbiera agregované dáta o zvyklostiach návštevníkov, vďaka ktorým denno denne vylepšujeme naše služby.",
+                        value: "1",
+                        required: false,
+                    },
+                    {
+                        name: "chat",
+                        title: "Chat na webovej stránke",
+                        text: "Pre komunikáciu s Vami používame službu Chative.io, ktorá odosiela údaje na servery. Neukladá žiadne osobné údaje, len text ktorý nám odosielate.",
+                        value: "1",
+                        required: false,
+                    },
+                ],
+            },
+            storage: window.localStorage || window.sessionStorage,
+            consentUsedKey: 'consent-used',
+            cookieValues: {
+                "functional": "1",
+                "analytics": "1",
+                "ad_storage": "1",
+                "ad_user_data": "1",
+                "ad_personalization": "1",
+                "analytics_storage": "1",
+                "chat": "1",
+            },
+            checkCookie(element) {
+                if (!element.classList.contains("disabled")) {
+                    if (element.classList.contains("active")) {
+                        element.classList.remove("active");
+
+                        if (element.dataset.cookie == "analytics") {
+                            const subItems = document.querySelectorAll(".cookie_wrapper_sub_item .cookie_checkbox");
+                            subItems.forEach((item) => item.classList.remove("active"));
+                        }
+                    } else {
+                        element.classList.add("active");
+
+                        if (element.dataset.cookie == "analytics") {
+                            const subItems = document.querySelectorAll(".cookie_wrapper_sub_item .cookie_checkbox");
+                            subItems.forEach((item) => item.classList.add("active"));
+                        }
+                    }
+                }
+            },
+            moreCookie() {
+                const cookieContainer = document.querySelector(".cookie_container");
+                const cookieMore = document.querySelector(".cookie_more");
+                const cookieLess = document.querySelector(".cookie_less");
+                const cookieDeny = document.querySelector(".cookie_deny");
+                const cookieSave = document.querySelector(".cookie_save");
+
+                cookieContainer.style.display = "block";
+                cookieMore.style.display = "none";
+                cookieLess.style.display = "flex";
+                cookieDeny.style.display = "none";
+                cookieSave.style.display = "flex";
+            },
+            lessCookie() {
+                const cookieContainer = document.querySelector(".cookie_container");
+                const cookieMore = document.querySelector(".cookie_more");
+                const cookieLess = document.querySelector(".cookie_less");
+                const cookieDeny = document.querySelector(".cookie_deny");
+                const cookieSave = document.querySelector(".cookie_save");
+
+                cookieContainer.style.display = "none";
+                cookieMore.style.display = "flex";
+                cookieLess.style.display = "none";
+                cookieDeny.style.display = "flex";
+                cookieSave.style.display = "none";
+            },
+            acceptCookie() {
+                const cookie = document.querySelector(".cookie");
+                const cookieBadge = document.querySelector(".cookie_badge");
+
+                cookie.classList.remove("visible");
+                cookieBadge.classList.add("visible");
+
+                this.cookieValues = {
+                    "functional": "1",
+                    "analytics": "1",
+                    "ad_storage": "granted",
+                    "ad_user_data": "granted",
+                    "ad_personalization": "granted",
+                    "analytics_storage": "granted",
+                    "chat": "1"
+                }
+
+                {% if ga.googleID is not empty %}
+                gtag('consent', 'update', {
+                    'ad_storage': 'granted',
+                    'ad_user_data': 'granted',
+                    'ad_personalization': 'granted',
+                    'analytics_storage': 'granted'
+                });
+                {% endif %}
+
+                Cookies.set('cookies', JSON.stringify(this.cookieValues));
+
+                this.storage.setItem(this.consentUsedKey, '1');
+            },
+            denyCookie() {
+                const cookie = document.querySelector(".cookie");
+                const cookieBadge = document.querySelector(".cookie_badge");
+
+                cookie.classList.remove("visible");
+                cookieBadge.classList.add("visible");
+
+                this.cookieValues = {
+                    "functional": "1",
+                    "analytics": "0",
+                    "ad_storage": "denied",
+                    "ad_user_data": "denied",
+                    "ad_personalization": "denied",
+                    "analytics_storage": "denied",
+                    "chat": "0"
+                }
+
+                {% if ga.googleID is not empty %}
+                gtag('consent', 'update', {
+                    'ad_storage': 'denied',
+                    'ad_user_data': 'denied',
+                    'ad_personalization': 'denied',
+                    'analytics_storage': 'denied'
+                });
+                {% endif %}
+
+                Cookies.set('cookies', JSON.stringify(this.cookieValues));
+
+                this.storage.setItem(this.consentUsedKey, '1');
+            },
+            saveCookie() {
+                const cookie = document.querySelector(".cookie");
+                const cookieBadge = document.querySelector(".cookie_badge");
+
+                cookie.classList.remove("visible");
+                cookieBadge.classList.add("visible");
+
+                this.cookieValues = {
+                    "functional": '1',
+                    "analytics": (document.querySelector("#analytics").classList.contains("active")) ? '1' :'0',
+                    "ad_storage": (document.querySelector("#ad_storage").classList.contains("active")) ? 'granted' : 'denied',
+                    "ad_user_data": (document.querySelector("#ad_user_data").classList.contains("active")) ? 'granted' : 'denied',
+                    "ad_personalization": (document.querySelector("#ad_personalization").classList.contains("active")) ? 'granted' : 'denied',
+                    "analytics_storage": (document.querySelector("#analytics_storage").classList.contains("active")) ? 'granted' : 'denied',
+                    "chat": (document.querySelector("#chat").classList.contains("active")) ? '1' :'0',
+                }
+
+                {% if ga.googleID is not empty %}
+                gtag('consent', 'update',  {
+                    'ad_storage': (document.querySelector("#ad_storage").classList.contains("active")) ? 'granted' : 'denied',
+                    'ad_user_data': (document.querySelector("#ad_user_data").classList.contains("active")) ? 'granted' : 'denied',
+                    'ad_personalization': (document.querySelector("#ad_personalization").classList.contains("active")) ? 'granted' : 'denied',
+                    'analytics_storage': (document.querySelector("#analytics_storage").classList.contains("active")) ? 'granted' : 'denied',
+                });
+                {% endif %}
+
+                Cookies.set('cookies', JSON.stringify(this.cookieValues));
+
+                this.storage.setItem(this.consentUsedKey, '1');
+            },
+            showCookie() {
+                const accepted_cookies = JSON.parse(Cookies.get('cookies') || '{}');
+                const cookieItems = document.querySelectorAll(".cookie_checkbox");
+                cookieItems.forEach((item) => {
+                    if (accepted_cookies[item.dataset.cookie] == "0" || accepted_cookies[item.dataset.cookie] == "denied") {
+                        item.classList.remove("active");
+                    }
+                });
+
+                if (!this.storage.getItem(this.consentUsedKey)) {
+                    const cookie = document.querySelector(".cookie");
+                    cookie.classList.add("visible");
+                } else {
+                    const cookieBadge = document.querySelector(".cookie_badge");
+                    cookieBadge.classList.add("visible");
+                }
+            }
+        }
+    }
+
+    function openCookie() {
+        const cookie = document.querySelector(".cookie");
+        const cookieBadge = document.querySelector(".cookie_badge");
+
+        cookie.classList.add("visible");
+        cookieBadge.classList.remove("visible");
+    }
+</script>
+
+<div class="cookie flex_column align_start" x-data="initCookies()">
+    <div class="cookie_title">{{ "TakeIT s.r.o."|t }}</div>
+    <p class="cookie_text">{{ "Používame súbory cookie na zabezpečenie rôznych funkcií služieb ponúkaných na tomto webe, na analýzu prístupu k nim a na použitie výsledkov na ich optimalizáciu. Ďalej používame cookies, aby sme umožnili cielenú reklamu. Za týmto účelom sa údaje odovzdávajú aj pridruženým spoločnostiam a našim partnerom. Ak chcete súhlasiť iba s nevyhnutnými súbormi cookie, môžete tu odmietnuť ďalšie súbory cookie."|t }} <a href="">{{ "Zásady používania súborov cookie"|t }}</a></p>
+    <div class="cookie_container">
+        <div class="cookie_wrapper flex_column align_start">
+
+            <template x-for="cookie in cookies_content.cookies" :key="cookie.name">
+                <div class="cookie_wrapper_item">
+                    <div class="cookie_wrapper_line flex align_center">
+                        <div class="column flex_column align_start">
+                            <span class="cookie_subtitle" x-text="cookie.title"></span>
+                            <p class="cookie_text" x-text="cookie.text"></p>
+                        </div>
+                        <div class="cookie_checkbox active"
+                             :class="{'disabled': cookie.required}"
+                             :id="cookie.name"
+                             :data-cookie="cookie.name"
+                             @click="checkCookie($el)">
+                            <span></span>
+                        </div>
+                    </div>
+
+                    <template x-if="cookie.name === 'analytics'">
+                        <div class="cookie_wrapper_sub flex align_center">
+                            <div class="cookie_wrapper_sub_item flex_column align_center">
+                                <div class="cookie_checkbox active"
+                                     id="ad_storage"
+                                     data-cookie="ad_storage"
+                                     @click="checkCookie($el)">
+                                    <span></span>
+                                </div>
+                                <p class="cookie_text">{{ "Súhlas s ukladaním cookies potrebných na Google Reklamu"|t }}</p>
+                            </div>
+
+                            <div class="cookie_wrapper_sub_item flex_column align_center">
+                                <div class="cookie_checkbox active"
+                                     id="ad_user_data"
+                                     data-cookie="ad_user_data"
+                                     @click="checkCookie($el)">
+                                    <span></span>
+                                </div>
+                                <p class="cookie_text">{{ "Súhlas s odoslaní dát na potrebu Google Ads"|t }}</p>
+                            </div>
+
+                            <div class="cookie_wrapper_sub_item flex_column align_center">
+                                <div class="cookie_checkbox active"
+                                     id="ad_personalization"
+                                     data-cookie="ad_personalization"
+                                     @click="checkCookie($el)">
+                                    <span></span>
+                                </div>
+                                <p class="cookie_text">{{ "Súhlas s personalizovanou reklamou"|t }}</p>
+                            </div>
+
+                            <div class="cookie_wrapper_sub_item flex_column align_center">
+                                <div class="cookie_checkbox active"
+                                     id="analytics_storage"
+                                     data-cookie="analytics_storage"
+                                     @click="checkCookie($el)">
+                                    <span></span>
+                                </div>
+                                <p class="cookie_text">{{ "Súhlas s ukladaním cookies súborov pre Google Analytics"|t }}</p>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+            </template>
+
+        </div>
+    </div>
+    <div class="cookie_bottom flex align_center space_between" x-init="showCookie()">
+        <div class="btn white square cookie_more" @click="moreCookie()"><span>{{ "Detail"|t }}</span></div>
+        <div class="btn white square cookie_less" @click="lessCookie()"><span>{{ "Zatvoriť"|t }}</span></div>
+        <div class="btn white square cookie_deny" @click="denyCookie()"><span>{{ "Odmietnuť"|t }}</span></div>
+        <div class="btn white square cookie_save" @click="saveCookie()"><span>{{ "Uložiť"|t }}</span></div>
+        <div class="btn red square cookie_accept" data-text="{{ "Akceptovať všetky"|t }}" @click="acceptCookie()"><span>{{ "Akceptovať všetky"|t }}</span></div>
+    </div>
+</div>
+
+<div class="cookie_badge" onclick="openCookie()">Cookies</div>

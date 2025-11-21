@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="cd9ce4fc-de59-4c26-868c-6e326fabb306" name="takeit">
+        <fileTransfer rootFolder="/takeitsro.sk/sub/gwhotel/craft" accessType="SFTP" host="takeitsro.sk" port="22" sshConfigId="56180c69-ab55-4e89-8f62-e2bde027eeaa" sshConfig="takeitsro.sk@takeitsro.sk:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

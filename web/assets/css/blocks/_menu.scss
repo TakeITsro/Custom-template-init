@@ -1,0 +1,28 @@
+.menu {
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  transform: translateX(-100%);
+  background-color: #fff;
+  transition: all 0.5s ease;
+  padding: 10px;
+  z-index: 200;
+
+  &.open {
+    transform: translateX(0%);
+  }
+
+  .nav {
+    .nav_item {
+      margin: 1em 0;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      span {
+
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+<div class="universalMatrix_elem downloads">
+    <h2>{{ "Na stiahnutie"|t }}</h2>
+
+    {% for elem in entry.catalogues.all() %}
+        <a href="{{ elem.url }}" target="_blank" class="downloads_item flex align_center">
+            <div class="icon"></div>
+            <div class="title">{{ elem.title }}</div>
+            <div class="btn"><span>{{ "Stiahnúť"|t }}</span></div>
+        </a>
+    {% endfor %}
+</div>

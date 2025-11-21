@@ -1,0 +1,7 @@
+<nav class="header_nav flex align_center">
+{% if menu.navigation is not empty %}
+    {% for item in menu.navigation.all() %}
+        <a href="{{ item.linkField }}" class="nav_item flex align_center">{{ item.title }}</a>
+    {% endfor %}
+{% endif %}
+</nav>

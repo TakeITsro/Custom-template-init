@@ -1,0 +1,74 @@
+color: orange
+description: null
+fieldLayouts:
+  f281c067-982a-45a8-9ce6-065368bc3696:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-11-21T12:08:37+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 8c225035-f1c3-4231-b893-90176b1fe0c9 # Image
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Obrázok
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 32525d46-816a-4057-a631-b52c9f766a23
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            dateAdded: '2025-11-21T12:08:37+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 8d86a61f-d33c-4232-8fdf-6b610620aa74 # Image position
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: 'Obrázok pozícia'
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f6c50874-bda3-45f5-adb0-5010d5844e90
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            dateAdded: '2025-11-21T12:08:37+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: c32f72bb-a4df-43b3-97d8-2e9166937d1a # Rich text simple
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Text
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e59e614b-cd80-4cda-89aa-8b359245d683
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: c3266567-c3bc-499e-8d97-a92c980df6a7
+        userCondition: null
+handle: universalMatrixTextImage
+hasTitleField: false
+icon: image
+name: 'Text s obrázkom'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

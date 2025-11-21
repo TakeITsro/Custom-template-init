@@ -1,0 +1,14 @@
+headingLevels: false
+name: Simple
+options:
+  alignment:
+    options:
+      - left
+      - right
+      - center
+toolbar:
+  - bold
+  - italic
+  - '|'
+  - alignment
+  - link

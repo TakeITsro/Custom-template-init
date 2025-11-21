@@ -1,0 +1,40 @@
+columnSuffix: null
+handle: titleLevel
+instructions: null
+name: 'Title level'
+searchable: false
+settings:
+  customOptions: false
+  iconsOnly: true
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - H2
+        -
+          - value
+          - h2
+        -
+          - icon
+          - h2
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - H3
+        -
+          - value
+          - h3
+        -
+          - icon
+          - h3
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\ButtonGroup

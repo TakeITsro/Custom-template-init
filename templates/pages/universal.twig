@@ -1,0 +1,12 @@
+{% extends "components/_layout" %}
+{% block content %}
+
+    <section class="universalPage flex_column align_start">
+        <h1>{{ entry.title }}</h1>
+
+        <div class="universalMatrix flex_column align_center">
+            {{ entry.universalMatrix.render() }}
+        </div>
+    </section>
+
+{% endblock %}

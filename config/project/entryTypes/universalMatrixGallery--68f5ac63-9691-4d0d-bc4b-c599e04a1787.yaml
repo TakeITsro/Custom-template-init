@@ -1,0 +1,40 @@
+color: orange
+description: null
+fieldLayouts:
+  939717a4-7e0e-440b-849b-66a44a8ea08a:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-11-21T12:14:51+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 40509efc-f763-4b2e-9d17-a604b05f2fdc # Gallery
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Obrázky
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 27234783-219a-4ee5-8194-7f64ccc78e76
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 3397219f-80b5-4e8f-80b9-0a853c97cb2e
+        userCondition: null
+handle: universalMatrixGallery
+hasTitleField: false
+icon: rectangle-history
+name: Galéria
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

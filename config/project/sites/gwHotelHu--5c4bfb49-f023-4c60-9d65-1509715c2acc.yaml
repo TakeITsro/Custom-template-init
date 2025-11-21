@@ -1,0 +1,9 @@
+baseUrl: '@web/hu'
+enabled: '1'
+handle: gwHotelHu
+hasUrls: true
+language: hu
+name: 'GW Hotel HU'
+primary: false
+siteGroup: 58bb178b-0f17-4a8b-b9b3-8be81a99e466 # GW Hotel
+sortOrder: 2

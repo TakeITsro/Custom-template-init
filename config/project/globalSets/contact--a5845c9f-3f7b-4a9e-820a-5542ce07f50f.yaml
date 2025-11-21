@@ -1,0 +1,155 @@
+fieldLayouts:
+  f2ff36a9-ac47-4cf1-9cb0-aa8365886930:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-11-21T12:21:47+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 41dbc146-a353-4ead-aea8-3da132b4c054 # Text multiline
+            handle: address
+            includeInCards: false
+            instructions: null
+            label: Adresa
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 541623a4-46ff-4774-ae6e-2664c91b8d61
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            dateAdded: '2025-11-21T12:21:47+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: dcd70131-3d39-4c78-bd1f-962def171b22 # Phone
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Telefón
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 49349559-d28c-4c9f-9148-cc729fff9279
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            dateAdded: '2025-11-21T12:21:47+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: f3f24bfa-8ca4-4ffb-aabf-364a7bb8aa54 # Email
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8833047c-78a5-4d6b-863c-0566e2d140a4
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            dateAdded: '2025-11-21T12:23:11+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: eb46378c-fdcd-4b50-8a77-2dd98f76dffe # Link field
+            handle: googleMap
+            includeInCards: false
+            instructions: null
+            label: 'Google map'
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c3a4a7cc-6dd9-4187-a85a-4f0d8ee809d9
+            userCondition: null
+            warning: null
+            width: 100
+        name: Kontakt
+        uid: 6b94cc74-9810-48c0-8e9a-24019c4e40ba
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-11-21T12:21:47+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 6bbd57d4-a325-4575-bfe8-6f1b0c4af23f # Social media
+            handle: facebook
+            includeInCards: false
+            instructions: null
+            label: Facebook
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: aaf3cc0d-f802-428e-9fef-f29dc7496ef4
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            dateAdded: '2025-11-21T12:21:47+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 6bbd57d4-a325-4575-bfe8-6f1b0c4af23f # Social media
+            handle: instagram
+            includeInCards: false
+            instructions: null
+            label: Instagram
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5f5ad5c4-9803-4519-bd05-51a77d2d6ad6
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            dateAdded: '2025-11-21T12:21:47+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 6bbd57d4-a325-4575-bfe8-6f1b0c4af23f # Social media
+            handle: tiktok
+            includeInCards: false
+            instructions: null
+            label: 'Tik Tok'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9cfe2b31-a9e5-4740-b720-02f48ca40d62
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            dateAdded: '2025-11-21T12:21:47+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 6bbd57d4-a325-4575-bfe8-6f1b0c4af23f # Social media
+            handle: youtube
+            includeInCards: false
+            instructions: null
+            label: Youtube
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 49a08654-0b6a-43c9-83aa-89119486fac1
+            userCondition: null
+            warning: null
+            width: 25
+        name: 'Social media'
+        uid: 1f7d733b-0df5-4095-9ca5-34f9f329566e
+        userCondition: null
+handle: contact
+name: Kontakt
+sortOrder: 1
